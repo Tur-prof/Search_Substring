@@ -4,11 +4,11 @@
 
 int IsKPeriodic(std::string text, int k)
 {
-	if (text.size() % k != 0) return 0; // Проверка кратности на целую периодичность
+	if (text.size() % k != 0) return 0; // РџСЂРѕРІРµСЂРєР° РєСЂР°С‚РЅРѕСЃС‚Рё РЅР° С†РµР»СѓСЋ РїРµСЂРёРѕРґРёС‡РЅРѕСЃС‚СЊ
 
-	std::vector<char> text_on; // Вектор строки
-	std::vector<char> sub_string; // Вектор подстроки
-	int period = 0; // Счетчик периодичности
+	std::vector<char> text_on; // Р’РµРєС‚РѕСЂ СЃС‚СЂРѕРєРё
+	std::vector<char> sub_string; // Р’РµРєС‚РѕСЂ РїРѕРґСЃС‚СЂРѕРєРё
+	int period = 0; // РЎС‡РµС‚С‡РёРє РїРµСЂРёРѕРґРёС‡РЅРѕСЃС‚Рё
 
 	for (int i = 0; i < text.size(); ++i)
 	{
@@ -23,7 +23,7 @@ int IsKPeriodic(std::string text, int k)
 	{
 		for (int j = 0; j < k; ++j)
 		{
-			if (text_on[i + j] != sub_string[j]) // посимвольное сравнение части строки и подстроки
+			if (text_on[i + j] != sub_string[j]) // РїРѕСЃРёРјРІРѕР»СЊРЅРѕРµ СЃСЂР°РІРЅРµРЅРёРµ С‡Р°СЃС‚Рё СЃС‚СЂРѕРєРё Рё РїРѕРґСЃС‚СЂРѕРєРё
 			{
 				return 0;
 			}
